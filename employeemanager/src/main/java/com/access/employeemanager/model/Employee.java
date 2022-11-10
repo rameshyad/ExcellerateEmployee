@@ -5,13 +5,14 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Employee implements Serializable{
 	@Id
-	@Generated(strategy=GenerationType.AUTO, value = { "" })
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@Column(nullable = false, updatable = false)
 	private String name;
