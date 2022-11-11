@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.access.employeemanager.model.Employee;
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employee, Long>{
-	@Query(value="Delete from Employee e where e.id=:n" , nativeQuery = true)
-	void deleteEmployeeById(@Param("n")Long id);
+	@Query(value="Delete from Employee e where e.id=:n1", nativeQuery = true)
+	void deleteEmployeeById(@Param("n1")Long id);
 	@Query(value="Select * from Employee e where e.id=:n", nativeQuery = true)
 	Optional<Employee> findEmployeeById(@Param("n")Long id);
 
